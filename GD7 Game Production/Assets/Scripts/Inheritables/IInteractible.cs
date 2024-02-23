@@ -7,6 +7,7 @@ public interface IInteractible
 
     void Interact();
 
-    void Highlight();
+    string GetInteractionText();
+
 }
 
