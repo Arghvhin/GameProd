@@ -35,6 +35,25 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
+<<<<<<< Updated upstream
+=======
+  <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.14</UnityProjectGeneratorVersion>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>2020.3.30f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Scripts\Inheritables\IInteractible.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\SceneLoader.cs" />
+    <Compile Include="Assets\Scripts\Controls\PlayerMovement.cs" />
+  </ItemGroup>
+>>>>>>> Stashed changes
   <ItemGroup>
      <Compile Include="Assets\Scripts\Main Menu\SceneLoader.cs" />
     <Reference Include="UnityEngine">
@@ -604,8 +623,14 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>C:\Users\Andrei\Desktop\Github Repos\GameProd\GD7 Game Production\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>C:\Users\Andrei\Desktop\Github Repos\GameProd\GD7 Game Production\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -632,7 +657,11 @@
         <HintPath>C:\Users\Andrei\Desktop\Github Repos\GameProd\GD7 Game Production\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
+<<<<<<< Updated upstream
         <HintPath>C:\Users\Andrei\Desktop\Github Repos\GameProd\GD7 Game Production\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+=======
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+>>>>>>> Stashed changes
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/Tutorial Level.unity
+=======
+- path: Assets/Scenes/Enemy AI Test.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
   isSubScene: 0
