@@ -7,10 +7,10 @@ public class PlayerMovement : MonoBehaviour
    
     public float moveSpeed = 7f;
     public float jumpForce = 3f;
-    public float acceleration = 50f;
+    public float acceleration = 5f;
 
     [SerializeField]
-    Vector3 moveY;
+    Vector3 move;
 
     private CharacterController characterController;
     public Vector3 moveDirection;
@@ -31,34 +31,28 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
         groundedPlayer = characterController.isGrounded;
         if (groundedPlayer)
         {
-            moveY.y = -2;
+            moveDirection.y = -2;
         }
 
         Inputs();
-        moveY.y += gravity * Time.deltaTime;
-
-        // Lerping acceleration
-        //Vector3 targetMoveDirection = moveDirection.normalized * moveSpeed;
-        //moveDirection = Vector3.Lerp(moveDirection, targetMoveDirection, acceleration * Time.deltaTime);
-
-        characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
-        characterController.Move(moveY * Time.deltaTime);
-
+        moveDirection.y += gravity * Time.deltaTime;
+        characterController.Move(moveDirection * Time.deltaTime);
+       
 
     }
 
     private void Inputs()
     {
-        moveDirection = Vector3.Scale(cameraOrientation.forward, new Vector3(1, 0, 1)).normalized * Input.GetAxis("Vertical") +
+        move = Vector3.Scale(cameraOrientation.forward, new Vector3(1, 0, 1)).normalized * Input.GetAxis("Vertical") +
             Vector3.Scale(cameraOrientation.right, new Vector3(1, 0, 1)).normalized * Input.GetAxis("Horizontal");
+        characterController.Move(move.normalized * moveSpeed * Time.deltaTime);
         if (groundedPlayer)
             if (Input.GetButtonDown("Jump"))
             {
-                moveY.y += Mathf.Sqrt(jumpForce * -3.0f * gravity);
+                moveDirection.y += Mathf.Sqrt(jumpForce * -3.0f * gravity);
             }
     }
 
