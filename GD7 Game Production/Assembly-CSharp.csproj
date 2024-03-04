@@ -36,12 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Combination_Puzzle\CombinationLockDoor.cs" />
+     <Compile Include="Assets\Scripts\Combination_Puzzle\ScopesCollisionHandler.cs" />
      <Compile Include="Assets\Scripts\Inheritables\IInteractible.cs" />
      <Compile Include="Assets\Scripts\Main Menu\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\Controls\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Combination_Puzzle\For Testing\PictureFrameController.cs" />
-     <Compile Include="Assets\Scripts\Combination_Puzzle\ScopesCollisionHandler.cs" />
-     <Compile Include="Assets\Scripts\Combination_Puzzle\CombinationLockDoor.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
