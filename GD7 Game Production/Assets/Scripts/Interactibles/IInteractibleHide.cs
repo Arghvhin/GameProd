@@ -44,7 +44,7 @@ public class IInteractibleHide : MonoBehaviour, IInteractible
     }
 
   
-    public void Interact()
+    public void Interact(string key)
     {
         if (!isHidden)
         {

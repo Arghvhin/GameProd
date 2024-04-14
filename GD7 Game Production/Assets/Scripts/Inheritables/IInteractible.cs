@@ -5,7 +5,7 @@ using UnityEngine;
 public interface IInteractible
 {
 
-    void Interact();
+    void Interact(string key);
 
     string GetDisplayText();
 

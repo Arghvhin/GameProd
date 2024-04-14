@@ -65,6 +65,8 @@
     <Compile Include="Assets\Scripts\Interactibles\IInteractibleHide.cs" />
     <Compile Include="Assets\Scripts\Player\Controls\PlayerInteractor.cs" />
     <Compile Include="Assets\Scripts\UI\InventoryItem.cs" />
+    <Compile Include="Assets\Scripts\Items\BasicItem.cs" />
+    <Compile Include="Assets\Scripts\Interactibles\InteractibleBasicItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

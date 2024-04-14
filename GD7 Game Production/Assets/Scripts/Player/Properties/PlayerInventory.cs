@@ -5,92 +5,113 @@ using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
+
     [SerializeField]
-    List<IItem> inventory;
+    List<GameObject> inventory;
     [SerializeField]
     int capacity;
     
     [SerializeField]
     GameObject inventoryUI;
     [SerializeField]
-    GameObject[] itemUI; 
+    GameObject[] itemUI;
+    [SerializeField]
+    GameObject selectedItem = null;
 
-    IItem selectedItem = null;
+    bool isOpen = false;
 
     
     void Start() {
-        
+        isOpen = false;
+
     }
 
     
     void Update() {
-        
+        Inputs();
     }
 
-    public IItem Find(IItem item) {
-        foreach (IItem invItem in inventory) {
-            if (invItem.GetType() == item.GetType()) {
-                return invItem;
+    private void Inputs() {
+        if (Input.GetButtonDown("Inventory")) {
+            ToggleInventory();
+        }
+    }
+
+    public bool Find(GameObject item) {
+        foreach (GameObject gameItem in inventory) {
+            if (gameItem.GetComponent<IItem>().GetType() == item.GetType()) {
+                return true;
             }
         }
-        return null;
+        return false;
     }
 
-    public bool tryAdd(IItem item, int count) {
-        /*
-         when try add item, check if iitem already exists in array. 
-        if no initialize item, else IItem.tryAdd. If fail, return false
-         */
-        IItem invItem = Find(item);
-
-        if (invItem != null)
-        {
-            return invItem.tryAdd(count);
-            
-        }
-        else if (inventory.Count < capacity) {
+    public bool tryAdd(GameObject item) {
+       if (inventory.Count < capacity) {
             inventory.Add(item);
-            return inventory[inventory.Count - 1].tryAdd(count);
+            return true;
         }
 
         return false;
     }
 
-    public void tryRemove(IItem item, int count) {
-        IItem invItem = Find(item);
+    public void Remove(GameObject item) {
+        inventory.Remove(item);
 
-        if (invItem != null)
+
+    }
+
+
+    public void ToggleInventory() {
+        if (isOpen)
         {
-            if (invItem.tryRemove(count)) {
-                inventory.Remove(invItem);
+            CloseInventory();
+            isOpen = false;
+        }
+        else
+        {
+            OpenInventory();
+            isOpen = true;
+        }
+    }
+    public void OpenInventory() {
+        inventoryUI.SetActive(true);
+        for (int i = 0; i < itemUI.Length; i++) {
+            Debug.Log("wa" + i);
+            Debug.Log("inv" + inventory.Count);
+            InventoryItem invItem = itemUI[i].GetComponent<InventoryItem>();
+            if (i < inventory.Count && inventory.Count != 0) {
+
+                IItem gameItem = inventory[i].GetComponent<IItem>();
+                invItem.SetItem(gameItem);
+            }
+            
+            else {
+                invItem.SetItem(null);
             }
         }
 
     }
-
-    public void openInventory() {
-        inventoryUI.SetActive(true);
-        for (int i = 0; i < itemUI.Length; i++) {
-            InventoryItem invItem = itemUI[i].GetComponent<InventoryItem>();
-            invItem.SetItem(inventory[i]);
-            invItem.Deselect();
-        }
-
-    }
-    public void closeInventory()
-    {
-        selectedItem = null;
+    public void CloseInventory() {
         inventoryUI.SetActive(false);
     }
 
 
-    public void SelectItem(InventoryItem invItem) {
+    public void SelectItem(int pos) {
 
         for (int i = 0; i < itemUI.Length; i++) {
             InventoryItem itemLoop = itemUI[i].GetComponent<InventoryItem>();
-            if (itemLoop.GetItem().GetType() == invItem.GetItem().GetType()) {
-                itemLoop.Select();
-                selectedItem = inventory[i];
+            if (i == pos) {
+                if (itemLoop.CheckSelected())
+                {
+                    itemLoop.Deselect();
+                    selectedItem = null;
+                }
+                else
+                {
+                    itemLoop.Select();
+                    selectedItem = inventory[i];
+                }
             }
             else {
                 itemLoop.Deselect();
@@ -98,13 +119,18 @@ public class PlayerInventory : MonoBehaviour
         }
        
     }
-    public void UseItem(string id)
-    {
+    public void DeselectAll() {
+
+        for (int i = 0; i < itemUI.Length; i++) {
+            InventoryItem itemLoop = itemUI[i].GetComponent<InventoryItem>();
+            itemLoop.Deselect();
+            selectedItem = null;
+        }
 
     }
-    public void DiscardItem()
-    {
 
+    public void DiscardItem() {
+        
     }
 
 

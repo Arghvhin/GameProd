@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,20 @@ using UnityEngine.UI;
 
 public class PlayerInteractor : MonoBehaviour
 {
+    [SerializeField]
+    PlayerInventory inventory;
+    [SerializeField]
+    Text interactionText;
+    [SerializeField]
+    Transform cameraPosition;
 
-    public Text interactionText;
-    public float raycastDistance = 2f;
-    public Transform cameraTransform;
 
-    private IInteractible selectedInteractible;
+    [SerializeField]
+    float raycastDistance = 2f;
+
+
+    IInteractible selectedInteractible;
+    
 
 
     void Start()
@@ -33,16 +42,17 @@ public class PlayerInteractor : MonoBehaviour
         if (Input.GetButtonDown("Interact"))
         {
             if (selectedInteractible != null) {
-                selectedInteractible.Interact();
-
+                selectedInteractible.Interact("interact");
+                
             }
         }
     }
 
-    public void CheckInteractible() {
+    private void CheckInteractible() {
         RaycastHit hit;
-        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, raycastDistance))
+        if (Physics.Raycast(cameraPosition.position, cameraPosition.forward, out hit, raycastDistance))
         {
+            Debug.Log(hit);
             IInteractible checkedObject = hit.collider.GetComponent<IInteractible>();
             if (checkedObject != null)
             {
@@ -58,7 +68,11 @@ public class PlayerInteractor : MonoBehaviour
             selectedInteractible = null;
             interactionText.text = "";
         }
-        Debug.DrawRay(cameraTransform.position, cameraTransform.forward * raycastDistance, Color.red);
+        Debug.DrawRay(cameraPosition.position, cameraPosition.forward * raycastDistance, Color.red);
+    }
+
+    public IInteractible GetInteractible() {
+        return selectedInteractible;
     }
 }
 

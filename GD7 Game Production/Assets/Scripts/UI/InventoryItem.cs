@@ -18,18 +18,16 @@ public class InventoryItem : MonoBehaviour
 
     public void SetItem(IItem newItem) {
         item = newItem;
-        Sprite sprite = null;
         
         if (item != null) {
-            sprite = Resources.Load<Sprite>(item.Image());
-
-            if (sprite != null) {
-                GetComponent<Image>().sprite = sprite;
-            }
+            Debug.Log("pog");
+            GetComponent<Image>().enabled = true;
+            GetComponent<Image>().sprite = item.Image().sprite;
         }
 
         else {
-            GetComponent<Image>().sprite = null;
+            Debug.Log("gers");
+            GetComponent<Image>().enabled = false;
         }
     }
 
@@ -42,6 +40,12 @@ public class InventoryItem : MonoBehaviour
         return item.Description();
     }
 
+    public bool CheckSelected() {
+        if (selected.activeSelf) {
+            return true;
+        }
+        return false;
+    }
     public void Select() {
         selected.SetActive(true);
     }
