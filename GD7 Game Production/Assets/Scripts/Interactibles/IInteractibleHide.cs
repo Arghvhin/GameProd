@@ -5,13 +5,34 @@ using UnityEngine;
 
 public class IInteractibleHide : MonoBehaviour, IInteractible
 {
+    GameObject player;
+    PlayerStatus playerStatus;
 
     private bool isHidden = false;
 
-    public CinemachineVirtualCamera activeCam;
+
+    [SerializeField]
+    CinemachineVirtualCamera activeCam;
+
+    bool queueUnhide = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+        playerStatus = player.GetComponent<PlayerStatus>();
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+
+    }
 
 
-    public string GetInteractionText()
+    public string GetDisplayText()
     {
         if (isHidden)
         {
@@ -30,23 +51,16 @@ public class IInteractibleHide : MonoBehaviour, IInteractible
 
             activeCam.Priority = 2;
             isHidden = true;
+            playerStatus.Hide();
         }
         else
         {
             activeCam.Priority = 0;
             isHidden = false;
+            playerStatus.Unhide();
+
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
