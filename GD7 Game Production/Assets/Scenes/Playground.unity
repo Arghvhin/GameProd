@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 62522595}
   - component: {fileID: 62522597}
   - component: {fileID: 62522596}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ItemSelected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 67579128}
   - component: {fileID: 67579127}
   - component: {fileID: 67579126}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 195182454}
   - component: {fileID: 195182453}
   - component: {fileID: 195182452}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 278733138}
   - component: {fileID: 278733137}
   - component: {fileID: 278733136}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 304117034}
   - component: {fileID: 304117035}
   - component: {fileID: 304117036}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 398624574}
   - component: {fileID: 398624576}
   - component: {fileID: 398624575}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ItemSelected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -790,7 +790,7 @@ GameObject:
   - component: {fileID: 412145857}
   - component: {fileID: 412145856}
   - component: {fileID: 412145855}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,7 +865,7 @@ GameObject:
   - component: {fileID: 543663704}
   - component: {fileID: 543663706}
   - component: {fileID: 543663705}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -947,7 +947,7 @@ GameObject:
   - component: {fileID: 570015859}
   - component: {fileID: 570015858}
   - component: {fileID: 570015857}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,7 +1049,7 @@ GameObject:
   - component: {fileID: 650863770}
   m_Layer: 0
   m_Name: CameraBrain
-  m_TagString: Untagged
+  m_TagString: Camera brain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1164,7 +1164,7 @@ GameObject:
   - component: {fileID: 685667676}
   - component: {fileID: 685667678}
   - component: {fileID: 685667677}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1339,7 +1339,7 @@ GameObject:
   - component: {fileID: 783757026}
   - component: {fileID: 783757025}
   - component: {fileID: 783757024}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1732,7 +1732,7 @@ GameObject:
   - component: {fileID: 1048968427}
   - component: {fileID: 1048968429}
   - component: {fileID: 1048968428}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ItemSelected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1807,7 +1807,7 @@ GameObject:
   - component: {fileID: 1074789656}
   - component: {fileID: 1074789658}
   - component: {fileID: 1074789657}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1916,7 +1916,8 @@ GameObject:
   - component: {fileID: 1294590053}
   - component: {fileID: 1294590052}
   - component: {fileID: 1294590051}
-  m_Layer: 0
+  - component: {fileID: 1294590057}
+  m_Layer: 6
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2028,6 +2029,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1294590057
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294590050}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 122
+  m_CollisionDetection: 2
 --- !u!1 &1329404551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,7 +2059,8 @@ GameObject:
   - component: {fileID: 1329404552}
   - component: {fileID: 1329404557}
   - component: {fileID: 1329404553}
-  m_Layer: 0
+  - component: {fileID: 1329404558}
+  m_Layer: 6
   m_Name: banana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2135,7 +2153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329404551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.72, y: -2.04, z: 14.51}
+  m_LocalPosition: {x: 2.72, y: -0.977, z: 14.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 783757023}
@@ -2154,6 +2172,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea585218e726504e90e23557e316786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1329404558
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329404551}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 122
+  m_CollisionDetection: 2
 --- !u!1 &1371821123
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,7 +2201,7 @@ GameObject:
   - component: {fileID: 1371821125}
   - component: {fileID: 1371821127}
   - component: {fileID: 1371821128}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Item3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2312,7 +2346,7 @@ GameObject:
   - component: {fileID: 1386803181}
   - component: {fileID: 1386803184}
   - component: {fileID: 1386803183}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2390,7 +2424,7 @@ GameObject:
   - component: {fileID: 1411433688}
   - component: {fileID: 1411433690}
   - component: {fileID: 1411433691}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Item2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2595,7 +2629,7 @@ GameObject:
   - component: {fileID: 1440870014}
   - component: {fileID: 1440870017}
   - component: {fileID: 1440870016}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Item1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2741,7 +2775,7 @@ GameObject:
   - component: {fileID: 1864729393}
   - component: {fileID: 1864729392}
   - component: {fileID: 1864729391}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: DiscardButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3104,7 +3138,7 @@ GameObject:
   - component: {fileID: 1999027999}
   - component: {fileID: 1999027998}
   - component: {fileID: 1999027997}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3207,7 +3241,8 @@ GameObject:
   - component: {fileID: 2129863707}
   - component: {fileID: 2129863706}
   - component: {fileID: 2129863705}
-  m_Layer: 0
+  - component: {fileID: 2129863711}
+  m_Layer: 6
   m_Name: puzzlepiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3319,6 +3354,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2129863711
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129863704}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 122
+  m_CollisionDetection: 2
 --- !u!1 &2143652731
 GameObject:
   m_ObjectHideFlags: 0
@@ -3330,7 +3381,7 @@ GameObject:
   - component: {fileID: 2143652732}
   - component: {fileID: 2143652734}
   - component: {fileID: 2143652733}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: InteractionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}

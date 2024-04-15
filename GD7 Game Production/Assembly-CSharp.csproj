@@ -58,15 +58,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Inheritables\IInteractible.cs" />
     <Compile Include="Assets\Scripts\Inheritables\IItem.cs" />
+    <Compile Include="Assets\Scripts\UI\InventoryItem.cs" />
+    <Compile Include="Assets\Scripts\Items\BasicItem.cs" />
     <Compile Include="Assets\Scripts\Player\Properties\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\Interactibles\InteractibleBasicItem.cs" />
     <Compile Include="Assets\Scripts\Player\Properties\PlayerStatus.cs" />
     <Compile Include="Assets\Scripts\Main Menu\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Player\Controls\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Interactibles\IInteractibleHide.cs" />
     <Compile Include="Assets\Scripts\Player\Controls\PlayerInteractor.cs" />
-    <Compile Include="Assets\Scripts\UI\InventoryItem.cs" />
-    <Compile Include="Assets\Scripts\Items\BasicItem.cs" />
-    <Compile Include="Assets\Scripts\Interactibles\InteractibleBasicItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

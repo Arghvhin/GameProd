@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
+    GameObject player;
+    PlayerStatus stats;
 
     [SerializeField]
     List<GameObject> inventory;
@@ -23,6 +25,8 @@ public class PlayerInventory : MonoBehaviour
     
     void Start() {
         isOpen = false;
+        player = GameObject.FindWithTag("Player");
+        stats = player.GetComponent<PlayerStatus>();
 
     }
 
@@ -40,6 +44,7 @@ public class PlayerInventory : MonoBehaviour
     public bool Find(GameObject item) {
         foreach (GameObject gameItem in inventory) {
             if (gameItem.GetComponent<IItem>().GetType() == item.GetType()) {
+
                 return true;
             }
         }
@@ -49,6 +54,7 @@ public class PlayerInventory : MonoBehaviour
     public bool tryAdd(GameObject item) {
        if (inventory.Count < capacity) {
             inventory.Add(item);
+            RefreshInventory();
             return true;
         }
 
@@ -56,7 +62,11 @@ public class PlayerInventory : MonoBehaviour
     }
 
     public void Remove(GameObject item) {
-        inventory.Remove(item);
+        if (selectedItem != null) {
+            DeselectAll();
+            inventory.Remove(item);
+            RefreshInventory();
+        }
 
 
     }
@@ -76,24 +86,34 @@ public class PlayerInventory : MonoBehaviour
     }
     public void OpenInventory() {
         inventoryUI.SetActive(true);
-        for (int i = 0; i < itemUI.Length; i++) {
-            Debug.Log("wa" + i);
-            Debug.Log("inv" + inventory.Count);
-            InventoryItem invItem = itemUI[i].GetComponent<InventoryItem>();
-            if (i < inventory.Count && inventory.Count != 0) {
+        RefreshInventory();
+        stats.SetLook(false);
+        stats.SetMove(false);
 
-                IItem gameItem = inventory[i].GetComponent<IItem>();
-                invItem.SetItem(gameItem);
-            }
-            
-            else {
-                invItem.SetItem(null);
-            }
-        }
+
 
     }
     public void CloseInventory() {
         inventoryUI.SetActive(false);
+        stats.SetLook(true);
+        stats.SetMove(true);
+    }
+    private void RefreshInventory() {
+        for (int i = 0; i < itemUI.Length; i++)
+        {
+            InventoryItem invItem = itemUI[i].GetComponent<InventoryItem>();
+            if (i < inventory.Count && inventory.Count != 0)
+            {
+
+                IItem gameItem = inventory[i].GetComponent<IItem>();
+                invItem.SetItem(gameItem);
+            }
+
+            else
+            {
+                invItem.SetItem(null);
+            }
+        }
     }
 
 
@@ -130,6 +150,10 @@ public class PlayerInventory : MonoBehaviour
     }
 
     public void DiscardItem() {
+        if (selectedItem != null) {
+            selectedItem.GetComponent<IInteractible>().Interact("discard");
+            Remove(selectedItem);
+        }
         
     }
 
