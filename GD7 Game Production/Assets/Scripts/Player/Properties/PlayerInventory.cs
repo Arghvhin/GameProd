@@ -51,6 +51,23 @@ public class PlayerInventory : MonoBehaviour
         return false;
     }
 
+    public string GetKey()
+    {
+        if (selectedItem == null) {
+            return "default";
+        }
+        return selectedItem.GetComponent<IItem>().Key();
+    }
+
+    public GameObject GetHolding()
+    {
+        if (selectedItem == null)
+        {
+            return null;
+        }
+        return selectedItem;
+    }
+
     public bool tryAdd(GameObject item) {
        if (inventory.Count < capacity) {
             inventory.Add(item);

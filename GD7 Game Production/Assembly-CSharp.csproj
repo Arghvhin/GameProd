@@ -67,6 +67,10 @@
     <Compile Include="Assets\Scripts\Player\Controls\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Interactibles\IInteractibleHide.cs" />
     <Compile Include="Assets\Scripts\Player\Controls\PlayerInteractor.cs" />
+    <Compile Include="Assets\Scripts\Interactibles\BasicItemRemove.cs" />
+    <Compile Include="Assets\Scripts\Interactibles\InteractibleFrame.cs" />
+    <Compile Include="Assets\Scripts\mechanisms\FrameRemoval.cs" />
+    <Compile Include="Assets\Scripts\Interactibles\InteractibleFrameItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

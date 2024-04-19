@@ -15,7 +15,7 @@ public class InteractibleBasicItem : MonoBehaviour, IInteractible
         player = GameObject.FindWithTag("Player");
         inventory = player.GetComponent<PlayerInventory>();
     }
-    public string GetDisplayText()
+    public string GetDisplayText(string key)
     {
         return ("interact to pick up");
     }

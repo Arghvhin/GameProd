@@ -32,7 +32,7 @@ public class IInteractibleHide : MonoBehaviour, IInteractible
     }
 
 
-    public string GetDisplayText()
+    public string GetDisplayText(string key)
     {
         if (isHidden)
         {

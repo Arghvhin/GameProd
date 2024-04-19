@@ -41,10 +41,9 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact"))
         {
-            if (selectedInteractible != null) {
-                selectedInteractible.Interact("interact");
+            selectedInteractible.Interact(inventory.GetKey());
                 
-            }
+            
         }
     }
 
@@ -57,9 +56,9 @@ public class PlayerInteractor : MonoBehaviour
             if (checkedObject != null)
             {
                 selectedInteractible = checkedObject;
-                interactionText.text = selectedInteractible.GetDisplayText();
+                interactionText.text = selectedInteractible.GetDisplayText(inventory.GetKey());
 
-                Debug.Log(selectedInteractible.GetDisplayText());
+                Debug.Log(selectedInteractible.GetDisplayText(inventory.GetKey()));
             }
 
         }

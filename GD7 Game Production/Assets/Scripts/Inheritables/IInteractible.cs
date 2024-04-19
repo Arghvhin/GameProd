@@ -7,7 +7,7 @@ public interface IInteractible
 
     void Interact(string key);
 
-    string GetDisplayText();
+    string GetDisplayText(string key);
 
 }
 
