@@ -41,6 +41,7 @@
      <Compile Include="Assets\Scripts\Combination_Puzzle\ScopesCollisionHandler.cs" />
      <Compile Include="Assets\Scripts\Inheritables\IInteractible.cs" />
      <Compile Include="Assets\Scripts\Chest_Puzzle\UnlockableObject.cs" />
+     <Compile Include="Assets\Scripts\Drawer_Mechanism\OpenCloseDrawers.cs" />
      <Compile Include="Assets\Scripts\Main Menu\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\Controls\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Combination_Puzzle\For Testing\PictureFrameController.cs" />
