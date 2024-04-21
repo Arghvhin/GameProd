@@ -7,7 +7,11 @@ public interface IInteractible
 
     void Interact(string key);
 
+<<<<<<< HEAD
     string GetDisplayText(string key);
 
+=======
+    void Highlight();
+>>>>>>> main
 }
 
