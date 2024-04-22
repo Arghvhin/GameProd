@@ -4,8 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Ignore player
   - Camera brain
+=======
+  - Pickable
+  - Frame
+>>>>>>> origin/Andrei/Level1rocksArea
   layers:
   - Default
   - TransparentFX
