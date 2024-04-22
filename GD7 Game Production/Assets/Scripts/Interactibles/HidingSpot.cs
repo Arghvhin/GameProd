@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IInteractibleHide : MonoBehaviour, IInteractible
+public class HidingSpot : MonoBehaviour, IInteractible
 {
+    //a hiding spot
+
     GameObject player;
     PlayerStatus playerStatus;
 

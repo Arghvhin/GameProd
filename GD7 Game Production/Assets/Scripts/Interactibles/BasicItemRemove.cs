@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BasicItemRemove : MonoBehaviour, IInteractible
 {
+    //an item that gets removed when the correct key is passed.
+
     [SerializeField]
     string reqKey;
     [SerializeField]

@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BasicItem : MonoBehaviour, IItem
+public class BaseItem : MonoBehaviour, IItem
 {
+
+    //Very basic inventory item component.
+
     [SerializeField]
     string name;
     [SerializeField]

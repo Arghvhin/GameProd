@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractibleFrame : MonoBehaviour, IInteractible
+public class ItemFrame : MonoBehaviour, IInteractible
 {
+
+    // A frame that activates itself when the correct item is used on it.
+
     [SerializeField]
     Transform pos;
     [SerializeField]

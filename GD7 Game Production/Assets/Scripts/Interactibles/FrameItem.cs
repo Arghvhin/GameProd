@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractibleFrameItem : MonoBehaviour, IInteractible
+public class FrameItem : MonoBehaviour, IInteractible
 {
+
+    // An item used to interact with item frames.
 
     GameObject player;
     PlayerInventory inventory;
