@@ -4,13 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
   - Ignore player
   - Camera brain
-=======
-  - Pickable
-  - Frame
->>>>>>> main
   layers:
   - Default
   - TransparentFX
