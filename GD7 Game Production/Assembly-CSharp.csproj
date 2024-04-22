@@ -50,6 +50,7 @@
      <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\Textures\1. Main Texture Folder.txt" />
      <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\1. Read Me!.txt" />
      <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\Prefabs\1. Main Prefab Folder.txt" />
+     <None Include="Assets\FoodAndGrocery\Info.txt" />
      <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\FreePack vs Full Pack\1. Free vs Full.txt" />
      <None Include="Assets\Hovl Studio\Magic effects pack\Demo scene\Readme.txt" />
     <Reference Include="UnityEngine">
