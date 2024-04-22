@@ -41,7 +41,10 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact"))
         {
-            selectedInteractible.Interact(inventory.GetKey());
+            if (selectedInteractible != null)
+            {
+                selectedInteractible.Interact(inventory.GetKey());
+            }
                 
             
         }

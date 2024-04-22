@@ -9,5 +9,6 @@ public interface IInteractible
 
     string GetDisplayText(string key);
 
+    void CanInteract(bool state);
 }
 

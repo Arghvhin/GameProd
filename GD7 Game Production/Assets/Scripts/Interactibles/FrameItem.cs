@@ -39,4 +39,12 @@ public class FrameItem : MonoBehaviour, IInteractible
         }
 
     }
+    public void CanInteract(bool state)
+    {
+        if (state)
+        {
+            gameObject.GetComponent<Collider>().enabled = true;
+        }
+        gameObject.GetComponent<Collider>().enabled = false;
+    }
 }

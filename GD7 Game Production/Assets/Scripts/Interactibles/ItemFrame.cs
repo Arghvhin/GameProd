@@ -9,8 +9,6 @@ public class ItemFrame : MonoBehaviour, IInteractible
 
     [SerializeField]
     Transform pos;
-    [SerializeField]
-    List<GameObject> item;
 
     [SerializeField]
     string reqKey;
@@ -71,8 +69,24 @@ public class ItemFrame : MonoBehaviour, IInteractible
                 isCorrect = false;
 
             }
-            itemRef = inventory.GetHolding();
-            inventory.Remove(itemRef);
+
+            if (itemRef == null)
+            {
+                if (key != "default") {
+                    itemRef = inventory.GetHolding();
+
+                    itemRef.SetActive(true);
+                    itemRef.GetComponent<IInteractible>().CanInteract(false);
+                    inventory.Remove(itemRef);
+                }
+                
+            }
+            else if (inventory.tryAdd(itemRef))
+            {
+                itemRef.SetActive(false);
+                itemRef.GetComponent<IInteractible>().CanInteract(true);
+                itemRef = null;
+            }
         }
 
     }
@@ -85,10 +99,17 @@ public class ItemFrame : MonoBehaviour, IInteractible
     }
 
     private void PlaceItem() {
+        
         itemRef.transform.position = pos.transform.position;
         itemRef.transform.rotation = pos.transform.rotation;
-        itemRef.SetActive(true);
     }
 
-    
+    public void CanInteract(bool state)
+    {
+        if (state)
+        {
+            gameObject.GetComponent<Collider>().enabled = true;
+        }
+        gameObject.GetComponent<Collider>().enabled = false;
+    }
 }

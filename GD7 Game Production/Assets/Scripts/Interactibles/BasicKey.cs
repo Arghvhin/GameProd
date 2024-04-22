@@ -24,14 +24,38 @@ public class BasicKey : MonoBehaviour, IInteractible
 
     public void Interact(string key)
     {
-        if (key == "discard") {
+        if (key == "discard")
+        {
             gameObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
             gameObject.SetActive(true);
             Debug.Log("ADF");
 
         }
-        else if (inventory.tryAdd(gameObject)) {
+
+        else if (key == "destroyKey") {
+            gameObject.SetActive(false);
+            inventory.Remove(gameObject);
+        }
+
+        else if (inventory.tryAdd(gameObject))
+        {
+            Debug.Log("added");
             gameObject.SetActive(false);
         }
+    }
+
+    public void CanInteract(bool state)
+    {
+        if (state)
+        {
+
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
+            gameObject.GetComponent<Collider>().enabled = true;
+        }
+        else {
+            gameObject.GetComponent<Rigidbody>().useGravity = false;
+            gameObject.GetComponent<Collider>().enabled = false;
+        }
+        
     }
 }
