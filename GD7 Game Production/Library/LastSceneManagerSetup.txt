@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Rock Package/Scene/Rock map.unity
+- path: Assets/Stalin/Stalin.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

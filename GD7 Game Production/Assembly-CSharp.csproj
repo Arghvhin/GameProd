@@ -45,6 +45,13 @@
      <Compile Include="Assets\Scripts\Main Menu\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\Controls\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Combination_Puzzle\For Testing\PictureFrameController.cs" />
+     <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\Materials\1. Main Material Folder.txt" />
+     <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\Models\1. Models.txt" />
+     <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\Textures\1. Main Texture Folder.txt" />
+     <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\1. Read Me!.txt" />
+     <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\Prefabs\1. Main Prefab Folder.txt" />
+     <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\FreePack vs Full Pack\1. Free vs Full.txt" />
+     <None Include="Assets\Hovl Studio\Magic effects pack\Demo scene\Readme.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
