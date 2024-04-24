@@ -37,14 +37,32 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Combination_Puzzle\CombinationLockDoor.cs" />
+     <Compile Include="Assets\drawerJumpscare.cs" />
+     <Compile Include="Assets\Scripts\Chest_Puzzle\InteractibleFrameItem.cs" />
      <Compile Include="Assets\Scripts\Chest_Puzzle\openChest.cs" />
      <Compile Include="Assets\Scripts\Combination_Puzzle\ScopesCollisionHandler.cs" />
+     <Compile Include="Assets\Scripts\Chest_Puzzle\ItemFrame.cs" />
      <Compile Include="Assets\Scripts\Inheritables\IInteractible.cs" />
+     <Compile Include="Assets\Scripts\mechanisms\FrameRemoval.cs" />
+     <Compile Include="Assets\Scripts\Chest_Puzzle\FrameItem.cs" />
+     <Compile Include="Assets\Scripts\Chest_Puzzle\InteractibleBasicItem.cs" />
+     <Compile Include="Assets\Scripts\Inheritables\IItem.cs" />
+     <Compile Include="Assets\Scripts\UI\InventoryItem.cs" />
      <Compile Include="Assets\Scripts\Chest_Puzzle\UnlockableObject.cs" />
+     <Compile Include="Assets\Scripts\Items\BaseItem.cs" />
+     <Compile Include="Assets\Scripts\Player\Properties\PlayerInventory.cs" />
+     <Compile Include="Assets\Scripts\Chest_Puzzle\InteractibleFrame.cs" />
+     <Compile Include="Assets\Scripts\Player\Controls\PlayerInteractor.cs" />
+     <Compile Include="Assets\Scripts\Chest_Puzzle\BasicKey.cs" />
+     <Compile Include="Assets\Scripts\Player\Properties\PlayerStatus.cs" />
      <Compile Include="Assets\Scripts\Drawer_Mechanism\OpenCloseDrawers.cs" />
      <Compile Include="Assets\Scripts\Main Menu\SceneLoader.cs" />
-     <Compile Include="Assets\Scripts\Controls\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Drawer_Mechanism\DrawerMechanism.cs" />
+     <Compile Include="Assets\Scripts\Chest_Puzzle\SingleUseItem.cs" />
+     <Compile Include="Assets\Scripts\Player\Controls\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Chest_Puzzle\HidingSpot.cs" />
      <Compile Include="Assets\Scripts\Combination_Puzzle\For Testing\PictureFrameController.cs" />
+     <Compile Include="Assets\Scripts\Chest_Puzzle\BasicItemRemove.cs" />
      <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\Materials\1. Main Material Folder.txt" />
      <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\Models\1. Models.txt" />
      <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\Textures\1. Main Texture Folder.txt" />

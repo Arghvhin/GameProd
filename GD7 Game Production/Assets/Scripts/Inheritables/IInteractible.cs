@@ -5,8 +5,10 @@ using UnityEngine;
 public interface IInteractible
 {
 
-    void Interact();
+    void Interact(string key);
 
-    void Highlight();
+    string GetDisplayText(string key);
+
+    void CanInteract(bool state);
 }
 
