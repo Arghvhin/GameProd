@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638495282805833316
-    m_Hash: 26422193
+      ticks: 638495404458770763
+    m_Hash: 3167856439
   m_LockFileStatus:
     m_FilePath: C:/Users/Andrei/Desktop/Github Repos/GameProd/GD7 Game Production/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638495282805900991
-    m_Hash: 2487985770
+      ticks: 638495404458776158
+    m_Hash: 4024033643
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
