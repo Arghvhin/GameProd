@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Main Menu\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Controls\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Combination_Puzzle\For Testing\PictureFrameController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\enemyAI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\Materials\1. Main Material Folder.txt" />
