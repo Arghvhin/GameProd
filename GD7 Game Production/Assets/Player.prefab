@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206321865612724390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.317082, y: 9.109447, z: -9.761235}
+  m_LocalPosition: {x: 734.86, y: 301.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5206321867307401893}
@@ -118,7 +118,7 @@ MonoBehaviour:
   moveSpeed: 7
   jumpForce: 3
   acceleration: 5
-  moveY: {x: 0, y: 0, z: 0}
+  move: {x: 0, y: 0, z: 0}
   moveDirection: {x: 0, y: 0, z: 0}
   isJumping: 0
   gravity: -9.8
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5206321865612724390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1bdd60f694565d4181c78b0e1d8fe8f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d6cb8197a695854ebc25fba87582d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 5206321865612724393}
@@ -602,7 +602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206321866496088348}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.317082, y: 9.449447, z: -9.761235}
+  m_LocalPosition: {x: 734.86, y: 302.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4792854393371343836}
@@ -849,7 +849,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5206321866695414376}
-  - component: {fileID: 5206321866695414389}
   - component: {fileID: 5206321866695414378}
   m_Layer: 3
   m_Name: PlayerCamera
@@ -866,21 +865,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206321866695414377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.34000015, z: 0}
+  m_LocalPosition: {x: 0, y: 0.33999634, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5206321866920001693}
   m_Father: {fileID: 5206321865612724386}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &5206321866695414389
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5206321866695414377}
-  m_Enabled: 1
 --- !u!114 &5206321866695414378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1655,7 +1646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6500605869685488449}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.970071, y: -10.269446, z: 21.72527}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5206321865612724386}
