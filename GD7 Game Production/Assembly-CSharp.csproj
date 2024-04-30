@@ -84,6 +84,8 @@
     <Compile Include="Assets\Scripts\Combination_Puzzle\For Testing\PictureFrameController.cs" />
     <Compile Include="Assets\Scripts\Chest_Puzzle\BasicItemRemove.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\scaryEventTrigger.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\Jumpscare.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Door\Dwarven Expedition Pack - Stylized Assets\Materials\1. Main Material Folder.txt" />
