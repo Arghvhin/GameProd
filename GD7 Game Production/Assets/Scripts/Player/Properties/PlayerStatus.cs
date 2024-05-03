@@ -9,6 +9,7 @@ public class PlayerStatus : MonoBehaviour
     MeshRenderer mesh;
     PlayerMovement movement;
     CinemachineBrain camera;
+    PlayerInteractor interact;
 
    
 
@@ -17,6 +18,7 @@ public class PlayerStatus : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         movement = player.GetComponent<PlayerMovement>();
+        interact = player.GetComponent<PlayerInteractor>();
         mesh = player.GetComponent<MeshRenderer>();
         camera = GameObject.FindWithTag("Camera brain").GetComponent<CinemachineBrain>();
         isHidden = false;
@@ -55,5 +57,13 @@ public class PlayerStatus : MonoBehaviour
     {
         movement.enabled = enabled;
     }
-    
+    public bool CanInteract()
+    {
+        return interact.enabled;
+    }
+    public void SetInteract(bool enabled)
+    {
+        interact.enabled = enabled;
+    }
+
 }

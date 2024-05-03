@@ -106,14 +106,15 @@ public class PlayerInventory : MonoBehaviour
         RefreshInventory();
         stats.SetLook(false);
         stats.SetMove(false);
-
-
+        stats.SetInteract(false);
 
     }
     public void CloseInventory() {
         inventoryUI.SetActive(false);
         stats.SetLook(true);
         stats.SetMove(true);
+        stats.SetInteract(true);
+        
     }
     private void RefreshInventory() {
         for (int i = 0; i < itemUI.Length; i++)
