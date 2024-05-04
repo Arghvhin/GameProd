@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,10 @@ public class InventoryItem : MonoBehaviour
 
     [SerializeField]
     GameObject selected;
+    [SerializeField]
+    TMP_Text nameText;
+    [SerializeField]
+    TMP_Text descText;
 
     private IItem item;
 
@@ -23,11 +28,15 @@ public class InventoryItem : MonoBehaviour
             Debug.Log("pog");
             GetComponent<Image>().enabled = true;
             GetComponent<Image>().sprite = item.Image().sprite;
+            nameText.text = item.Name();
+            descText.text = item.Description();
         }
 
         else {
             Debug.Log("gers");
-            GetComponent<Image>().enabled = false;
+            GetComponent<Image>().sprite = null;
+            nameText.text = "";
+            descText.text = "";
         }
     }
 

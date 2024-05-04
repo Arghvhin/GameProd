@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class PlayerInteractor : MonoBehaviour
 {
+
     [SerializeField]
     PlayerInventory inventory;
-    [SerializeField]
-    Text interactionText;
+
+    InteractionText interactionText;
     [SerializeField]
     Transform cameraPosition;
 
@@ -17,13 +18,14 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField]
     float raycastDistance = 2f;
 
-
     IInteractible selectedInteractible;
     
 
 
     void Start()
     {
+        inventory = FindObjectOfType<PlayerInventory>();
+        interactionText = FindObjectOfType<InteractionText>();
     }
 
     private void Update()
@@ -59,7 +61,7 @@ public class PlayerInteractor : MonoBehaviour
             if (checkedObject != null)
             {
                 selectedInteractible = checkedObject;
-                interactionText.text = selectedInteractible.GetDisplayText(inventory.GetKey());
+                interactionText.SetText(selectedInteractible.GetDisplayText(inventory.GetKey()));
 
                 Debug.Log(selectedInteractible.GetDisplayText(inventory.GetKey()));
             }
@@ -68,7 +70,7 @@ public class PlayerInteractor : MonoBehaviour
         else
         {
             selectedInteractible = null;
-            interactionText.text = "";
+            interactionText.SetText("");
         }
         Debug.DrawRay(cameraPosition.position, cameraPosition.forward * raycastDistance, Color.red);
     }
