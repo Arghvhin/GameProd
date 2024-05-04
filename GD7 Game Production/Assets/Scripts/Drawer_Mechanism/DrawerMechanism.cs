@@ -34,7 +34,7 @@ public class DrawerMechanism : MonoBehaviour, IInteractible
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        inventory = player.GetComponent<PlayerInventory>();
+        inventory = FindObjectOfType<PlayerInventory>();
 
         // Store the initial position of the drawer
         initialPosition = gameObject.transform.position;

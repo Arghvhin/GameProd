@@ -8,6 +8,7 @@ public class FrameItem : MonoBehaviour, IInteractible
     // An item used to interact with item frames.
 
     GameObject player;
+    [SerializeField]
     PlayerInventory inventory;
 
 
@@ -15,7 +16,7 @@ public class FrameItem : MonoBehaviour, IInteractible
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        inventory = player.GetComponent<PlayerInventory>();
+        inventory = FindObjectOfType<PlayerInventory>();
     }
     public string GetDisplayText(string key)
     {
@@ -30,10 +31,6 @@ public class FrameItem : MonoBehaviour, IInteractible
             Debug.Log("ADF");
 
         }
-        else if (key == "frame")
-        {
-            gameObject.transform.GetComponent<Rigidbody>().useGravity = false;
-        }
         else if (inventory.tryAdd(gameObject)) {
             gameObject.SetActive(false);
         }
@@ -43,8 +40,15 @@ public class FrameItem : MonoBehaviour, IInteractible
     {
         if (state)
         {
+
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
             gameObject.GetComponent<Collider>().enabled = true;
         }
-        gameObject.GetComponent<Collider>().enabled = false;
+        else
+        {
+            gameObject.GetComponent<Rigidbody>().useGravity = false;
+            gameObject.GetComponent<Collider>().enabled = false;
+        }
+
     }
 }

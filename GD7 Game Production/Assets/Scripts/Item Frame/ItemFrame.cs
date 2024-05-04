@@ -12,10 +12,6 @@ public class ItemFrame : MonoBehaviour, IInteractible
 
     [SerializeField]
     string reqKey;
-    [SerializeField]
-    string noKeyText;
-    [SerializeField]
-    string hasKeyText;
 
     [SerializeField]
     GameObject itemRef;
@@ -30,7 +26,7 @@ public class ItemFrame : MonoBehaviour, IInteractible
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        inventory = player.GetComponent<PlayerInventory>();
+        inventory = FindObjectOfType<PlayerInventory>();
     }
 
     void Update()

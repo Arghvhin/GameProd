@@ -8,7 +8,6 @@ public class BasicKey : MonoBehaviour, IInteractible
     //An item that can be picked up and used to interact with objects.
 
     GameObject player;
-    [SerializeField]
     PlayerInventory inventory;
 
 

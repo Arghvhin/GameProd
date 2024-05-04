@@ -23,7 +23,7 @@ public class SingleUseItem : MonoBehaviour, IInteractible
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        inventory = player.GetComponent<PlayerInventory>();
+        inventory = FindObjectOfType<PlayerInventory>();
     }
 
     // Update is called once per frame
