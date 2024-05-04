@@ -8,6 +8,7 @@ public class BasicKey : MonoBehaviour, IInteractible
     //An item that can be picked up and used to interact with objects.
 
     GameObject player;
+    [SerializeField]
     PlayerInventory inventory;
 
 
@@ -15,7 +16,7 @@ public class BasicKey : MonoBehaviour, IInteractible
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        inventory = player.GetComponent<PlayerInventory>();
+        inventory = FindObjectOfType<PlayerInventory>();
     }
     public string GetDisplayText(string key)
     {
