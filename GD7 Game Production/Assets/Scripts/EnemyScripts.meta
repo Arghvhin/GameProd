@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 54a909aaa88b1464e9bdfa8244e9c435
+=======
+<<<<<<<< Updated upstream:GD7 Game Production/Assets/Enemy.meta
+guid: a281bc78654ee6543bab37ec86d0b551
+========
+guid: 2459976b1fc7d504188927ce2d369306
+>>>>>>>> Stashed changes:GD7 Game Production/Assets/Scripts/EnemyScripts.meta
+>>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

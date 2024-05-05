@@ -1,6 +1,19 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:GD7 Game Production/Assets/Enemy.meta
 guid: a281bc78654ee6543bab37ec86d0b551
+========
+guid: 2459976b1fc7d504188927ce2d369306
+>>>>>>>> Stashed changes:GD7 Game Production/Assets/Scripts/EnemyScripts.meta
 folderAsset: yes
+=======
+<<<<<<<< Updated upstream:GD7 Game Production/Assets/Scenes/Level 1 Halfwaydone Joseph.unity.meta
+guid: da79e7002d4479c49ba23d0f3a1eaeeb
+========
+guid: abe6561f538e7284e8a43d4efb627f46
+folderAsset: yes
+>>>>>>>> Stashed changes:GD7 Game Production/Assets/Enemy.meta
+>>>>>>> Stashed changes
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/Level 1 Halfwaydone Joseph.unity
+=======
+- path: Assets/Scenes/Level 1 Halfwaydone(Enemy Included).unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
   isSubScene: 0

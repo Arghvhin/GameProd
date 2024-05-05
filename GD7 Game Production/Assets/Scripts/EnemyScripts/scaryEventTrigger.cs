@@ -17,4 +17,8 @@ public class scaryEventTrigger : MonoBehaviour
             collision.enabled = false;
         }
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
