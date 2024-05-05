@@ -136,27 +136,32 @@ public class PlayerInventory : MonoBehaviour
 
 
     public void SelectItem(int pos) {
-
-        for (int i = 0; i < itemUI.Length; i++) {
-            InventoryItem itemLoop = itemUI[i].GetComponent<InventoryItem>();
-            Debug.Log("balls " + pos);
-            if (i == pos) {
-                if (itemLoop.CheckSelected())
+        try
+        {
+            for (int i = 0; i < itemUI.Length; i++)
+            {
+                InventoryItem itemLoop = itemUI[i].GetComponent<InventoryItem>();
+                Debug.Log("balls " + pos);
+                if (i == pos)
                 {
-                    itemLoop.Deselect();
-                    selectedItem = null;
+                    if (itemLoop.CheckSelected())
+                    {
+                        itemLoop.Deselect();
+                        selectedItem = null;
+                    }
+                    else
+                    {
+                        itemLoop.Select();
+                        selectedItem = inventory[i];
+                    }
                 }
                 else
                 {
-                    itemLoop.Select();
-                    selectedItem = inventory[i];
+                    itemLoop.Deselect();
                 }
             }
-            else {
-                itemLoop.Deselect();
-            }
         }
-       
+        catch { }
     }
     public void DeselectAll() {
 

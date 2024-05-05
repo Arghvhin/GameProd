@@ -46,6 +46,7 @@ public class PlayerInteractor : MonoBehaviour
             if (selectedInteractible != null)
             {
                 selectedInteractible.Interact(inventory.GetKey());
+                selectedInteractible = null;
             }
                 
             
@@ -56,7 +57,7 @@ public class PlayerInteractor : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(cameraPosition.position, cameraPosition.forward, out hit, raycastDistance))
         {
-            Debug.Log(hit);
+            
             IInteractible checkedObject = hit.collider.GetComponent<IInteractible>();
             if (checkedObject != null)
             {

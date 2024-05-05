@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 7f;
     public float jumpForce = 3f;
     public float acceleration = 5f;
+    public float snapStrength = -2f;
 
     [SerializeField]
     Vector3 move;
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         groundedPlayer = characterController.isGrounded;
         if (groundedPlayer)
         {
-            moveDirection.y = -2;
+            moveDirection.y = snapStrength;
         }
 
         Inputs();
@@ -52,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         if (groundedPlayer)
             if (Input.GetButtonDown("Jump"))
             {
-                moveDirection.y += Mathf.Sqrt(jumpForce * -3.0f * gravity);
+                moveDirection.y = jumpForce;
             }
     }
 
