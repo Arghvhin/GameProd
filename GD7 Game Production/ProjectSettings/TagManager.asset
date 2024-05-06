@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Camera brain
   - Pickable
+  - Lava
   layers:
   - Default
   - TransparentFX

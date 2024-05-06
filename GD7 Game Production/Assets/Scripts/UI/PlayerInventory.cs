@@ -28,6 +28,9 @@ public class PlayerInventory : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         stats = player.GetComponent<PlayerStatus>();
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
     }
 
     
@@ -107,6 +110,8 @@ public class PlayerInventory : MonoBehaviour
         stats.SetLook(false);
         stats.SetMove(false);
         stats.SetInteract(false);
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
 
     }
     public void CloseInventory() {
@@ -114,6 +119,8 @@ public class PlayerInventory : MonoBehaviour
         stats.SetLook(true);
         stats.SetMove(true);
         stats.SetInteract(true);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         
     }
     private void RefreshInventory() {
