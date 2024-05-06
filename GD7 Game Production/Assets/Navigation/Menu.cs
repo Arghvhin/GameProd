@@ -47,7 +47,7 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level 1 Halfwaydone Joseph");
+        SceneManager.LoadScene("Level 1");
     }
 
     public void StartCredits()
