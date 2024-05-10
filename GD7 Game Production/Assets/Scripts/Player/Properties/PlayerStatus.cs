@@ -33,18 +33,10 @@ public class PlayerStatus : MonoBehaviour
     }
     public void Unhide()
     {
-        Debug.Log("hey guys so");
-        StartCoroutine(IEUnhide());
-    }
-
-    IEnumerator IEUnhide()
-    {
-        yield return new WaitForSeconds(1);
-
-        Debug.Log("my balls are big");
         SetMove(true);
         mesh.enabled = true;
     }
+    
 
     public bool CanLook() {
         return camera.enabled;

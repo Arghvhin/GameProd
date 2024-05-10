@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class CameraSettings : MonoBehaviour
 {
-    public float gravity;
     public bool screenres;
-    public int hres;
-    public int vres;
+    public int hres = 480;
+    public int vres = 320;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +15,6 @@ public class CameraSettings : MonoBehaviour
 
             Screen.SetResolution(hres, vres, FullScreenMode.FullScreenWindow);
         }
-        Physics.gravity = new Vector3(0, gravity, 0);
     }
 
     // Update is called once per frame

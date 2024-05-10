@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
 
-        // Lock cursor
         
     }
 

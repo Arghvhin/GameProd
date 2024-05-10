@@ -16,7 +16,6 @@ public class HidingSpot : MonoBehaviour, IInteractible
     [SerializeField]
     CinemachineVirtualCamera activeCam;
 
-    bool queueUnhide = false;
 
     // Start is called before the first frame update
     void Start()

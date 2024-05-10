@@ -22,7 +22,7 @@ public class CameraCondition : MonoBehaviour
     [SerializeField]
     GameObject door;
     [SerializeField]
-    GameObject enemy;
+    GameObject[] enemy;
 
 
 
@@ -48,7 +48,9 @@ public class CameraCondition : MonoBehaviour
             if (correctAmount == frames.Length || debugTrue)
             {
                 door.SetActive(false);
-                enemy.SetActive(false);
+                foreach (var senemy in enemy)
+                { 
+                    senemy.SetActive(false);}
                 foreach (var frame in frames) {
                     frame.SetLock(true);
                 }
@@ -70,7 +72,10 @@ public class CameraCondition : MonoBehaviour
                     status.Unhide();
                     Debug.Log("back yo uoi");
                     correctTriggered = true;
-                    enemy.SetActive(true);
+                    foreach (var senemy in enemy)
+                    {
+                        senemy.SetActive(true);
+                    }
                 }
 
             }
