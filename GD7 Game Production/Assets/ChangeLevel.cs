@@ -12,7 +12,7 @@ public class ChangeLevel : MonoBehaviour
     }
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Player")) ;
+        if (collision.CompareTag("Player"))
         {
             Debug.Log("fuck me");
             SceneManager.LoadScene(level, LoadSceneMode.Single);

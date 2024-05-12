@@ -121,7 +121,9 @@ GameObject:
   - component: {fileID: 2774951581472864887}
   - component: {fileID: 2774951581472864886}
   - component: {fileID: 2774951581472864885}
+  - component: {fileID: 2674811968530226783}
   - component: {fileID: 2774951581472864884}
+  - component: {fileID: 7766221029924608542}
   - component: {fileID: 2774951581472864889}
   - component: {fileID: 2774951581472864888}
   - component: {fileID: 2774951581472864890}
@@ -197,6 +199,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &2674811968530226783
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2774951581472864883}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!136 &2774951581472864884
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -207,10 +225,27 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.6
+  m_Height: 2.1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7766221029924608542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2774951581472864883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbed4120728209449627c5c16ca9d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerGameObject: {fileID: 2774951581472864883}
+  maxLives: 3
+  currentLives: 0
+  heartImage1: {fileID: 0}
+  heartImage2: {fileID: 0}
 --- !u!114 &2774951581472864889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,9 +259,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 7.5
-  runningSpeed: 11.5
-  jumpSpeed: 8
-  gravity: 10
+  runningSpeed: 15
+  jumpSpeed: 9
+  gravity: 20
   playerCamera: {fileID: 2774951580390236349}
   lookSpeed: 2
   lookXLimit: 45
@@ -304,7 +339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2774951581805849545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9298168, y: 5.1598687, z: 0}
+  m_LocalPosition: {x: 1.9298168, y: 5.0578885, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3189017239545874697}
@@ -407,7 +442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3816497b6db0a3f4081e6b04e4b5b860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 0
   screenres: 0
   hres: 0
   vres: 0
