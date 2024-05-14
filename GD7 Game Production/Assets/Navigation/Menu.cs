@@ -52,7 +52,7 @@ public class Menu : MonoBehaviour
 
     public void StartCredits()
     {
-        // Load credits scene or perform other actions related to showing credits
+       SceneManager.LoadScene("CreditScene");
     }
 
     public void Quit()

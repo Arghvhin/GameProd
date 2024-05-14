@@ -42,13 +42,6 @@ public class Char_Stats : MonoBehaviour
             TeleportToBeginningPosition();
             TakeDamage();
         }
-        //Enemy Take damage
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            TeleportToBeginningPosition();
-            ResetEnemyPosition();
-            TakeDamage();
-        }
     }
     //Teleports player to the start of the level
     private void TeleportToBeginningPosition()

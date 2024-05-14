@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 1333236664}
   - component: {fileID: 1333236665}
   m_Layer: 0
-  m_Name: GameOverScene
+  m_Name: BackToMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
